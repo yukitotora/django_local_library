@@ -20,8 +20,8 @@ def index(request):
     num_authors = Author.objects.count()
     #特定の単語が含まれる本の数を数える
     num_word_books = Book.objects.filter(
-        Q(title__icontains='momo')|
-        Q(genre__name__icontains='momo')
+        Q(title__icontains='hoge')|
+        Q(genre__name__icontains='hoge')
     ).distinct().count()
 
     # Number of visits to this view, as counted in the session variable.
